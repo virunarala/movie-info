@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Movie Info</string>
+
+    <string name="hint_query">Search movies</string>
+    
+    <string name="error_no_internet">Check your internet connection and try again</string>
+    <string name="string_try_again">TRY AGAIN</string>
+    <string name="string_dismiss">DISMISS</string>
+    <string name="error_no_movies_found">No movies found. Try searching with a different name</string>
+
+    <string name="title_search">Search</string>
+    <string name="title_history">History</string>
+
+    <string name="string_director">Director: %1$s</string>
+    <string name="string_writer">Writer: %1$s</string>
+    <string name="string_actors">Actors: %1$s</string>
 </resources>
