@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/view_movie"
+    android:orientation="vertical"
+
+    android:layout_marginTop="48dp"
+    >
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_movie_poster"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
+
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedCorners"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/text_movie_title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/margin_small"
+
+        android:textStyle="bold"
+
+        tools:text="Beauty and the Beast"
+        />
+
+    <TextView
+        android:id="@+id/text_movie_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        tools:text="2012"/>
+
+</LinearLayout>

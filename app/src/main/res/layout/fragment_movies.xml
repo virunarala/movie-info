@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".movies.MoviesFragment">
+
+    <TextView
+        android:id="@+id/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+
+        android:textSize="@dimen/text_size_heading"
+        android:textStyle="bold"
+
+        android:text="Browse"/>
+
+    <TextView
+        android:id="@+id/text_subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+
+        android:layout_below="@id/text_heading"
+        android:text="Movies" />
+
+
+    <SearchView
+        android:id="@+id/search_movies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/text_subheading"
+
+        android:layout_marginTop="@dimen/margin_medium"
+
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/hint_query"/>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/edit_text_search_movies"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_below="@id/text_subheading"-->
+<!--        android:layout_marginStart="@dimen/margin_medium"-->
+<!--        android:layout_marginEnd="@dimen/margin_medium"-->
+<!--        android:layout_marginTop="@dimen/margin_medium"-->
+
+<!--        app:startIconDrawable="@drawable/ic_baseline_search_24"-->
+
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+
+<!--        android:hint="@string/hint_query">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:imeOptions="actionSearch"-->
+<!--            android:maxLines="1"/>-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_movies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
+        android:layout_below="@id/search_movies"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium" />
+
+    <TextView
+        android:id="@+id/text_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+
+        android:text="@string/error_no_movies_found"
+        android:textStyle="bold"
+
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
